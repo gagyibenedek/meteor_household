@@ -1,0 +1,11 @@
+<template name="total">
+    <div class="total-wrapper total-{{#if inDebt}}n{{/if}}ok">
+      <h1 class="total-content">
+        Total to pay: 
+        <span class="total-highlight total-hightlight-{{#if inDebt}}n{{/if}}ok">
+          {{total}}
+        </span>
+      </h1>
+    </div>
+</template>
+

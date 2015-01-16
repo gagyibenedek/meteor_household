@@ -1,0 +1,29 @@
+<template name="form">
+    <form>
+      <div class="row">
+        <div class="label">Sum</div>
+        <input type="text" class="sum" name="sum"/>
+      </div>
+      
+      <div class="row">
+        <div class="label">Comment</div>
+        <textarea class="comment" maxlength="60" name="comment"></textarea>
+      </div>
+      
+      <div class="switch-container">
+        {{#each switches}}
+          {{> switch}}
+        {{/each}}      
+      </div><div class="category">
+        <div class="category-label">Category</div>
+        {{#with categorySelector}}
+          {{> dropdown}}
+        {{/with}}
+      </div>
+      
+      <button id="save" class="btn-save">
+        Save
+      </button>
+ 
+    </form>
+</template>

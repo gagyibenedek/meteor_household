@@ -1,0 +1,40 @@
+<template name="log">
+    <table class="log-table">
+        <tr class="log-table-header">
+            <th class="left-aligned">
+                Sum
+            </th>
+            <th class="right-aligned">
+                Comment
+            </th>   
+            <th class="right-aligned">
+                Category
+            </th>
+            <th class="right-aligned">
+                Created at
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+        {{#each logRows}}
+            <tr>
+                <td class="td left-aligned {{#if positiveOperation}} green {{else}} red {{/if}}">
+                    {{sum}}
+                </td>
+                <td class="right-aligned">
+                    {{comment}}
+                </td>
+                <td class="right-aligned">
+                    {{category}}
+                </td>
+                <td class="right-aligned">
+                    {{formatDate createdAt}}
+                </td>
+                <td class="delete">
+                    <i class="entypo entypo-trash"></i>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</template>

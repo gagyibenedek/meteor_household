@@ -1,0 +1,21 @@
+.dropdown-arrow {
+    float: right;
+}
+
+.dropdown-container {
+    outline: 0;
+}
+
+.dropdown-values {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-values-elem {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

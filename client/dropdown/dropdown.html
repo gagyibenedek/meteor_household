@@ -1,0 +1,32 @@
+<template name="dropdown">
+    <div class="dropdown-container" tabindex="-1">
+        <div class="dropdown-actual">
+            {{#if actualValue}}
+                {{actualValue}}
+            {{else}}
+                {{defaultValue.key}}
+            {{/if}}
+            <span class="dropdown-value-icon icon" aria-hidden="true">A</span>
+        </div>
+        
+        <ul class="dropdown-values {{hidden}}">
+            {{#if nonDefault}}
+                <li class="dropdown-values-elem" data-value="2" data-key="General" data-def="true">
+                    General
+                </li>
+            {{/if}}
+            {{#each values}}
+                {{> dropdownValue}}
+            {{/each}}
+        </ul>
+    </div>
+</template>
+
+<template name="dropdownValue">
+    {{#if nonActual}}
+        <li class="dropdown-values-elem" data-value="{{value}}" data-key="{{key}}">
+            <span class="dropdown-value-icon icon" aria-hidden="true">{{icon}}</span>
+            {{key}}
+        </li>
+    {{/if}}
+</template>

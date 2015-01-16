@@ -1,0 +1,149 @@
+@import "household_vars.import.less";
+@import "household_fn.import.less";
+
+body {
+    background-color: @main-color-dark;
+    font-family: 'Roboto', sans-serif;
+}
+
+[class^="btn"] {
+    position: relative;
+    background-color: @main-color;
+    color: @text-color;
+    border: 4px @text-color solid;
+    cursor: pointer;
+    overflow: hidden;
+    letter-spacing: 10px;
+    z-index: 1;
+}
+
+[class^="btn"]:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background-color: @text-color;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: all 0.3s ease 0s;
+}
+
+[class^="btn"]:hover {
+    color: @main-color;
+}
+
+[class^="btn"]:hover:after {
+    width: 100%;
+    height: 280%;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('/icons/icomoon.eot');
+    src: url('/icons/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('/icons/icomoon.woff') format('woff'),
+        url('/icons/icomoon.ttf') format('truetype'),
+        url('/icons/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+  font-family: 'icomoon'; 
+  content: attr(data-icon);
+  speak: none; 
+}
+
+.title-wrapper {
+    width: 100%;
+    height: 3em;
+    color: @text-color;
+    font-size: 40px;
+    
+    .title {
+        text-align: center;
+        letter-spacing: @letter-spacing-s;
+        z-index: 2;
+    }
+    
+    .title-accent {
+        .Oswald;
+        color: @main-color-dark;  
+        letter-spacing: @letter-spacing-l;
+    }
+    
+    .title-background {
+        position: relative;
+        top: -4em;
+        left: -10%;
+        width: 120%;
+        height: 5em;
+        background-color: @main-color;
+        .rotate(-5deg);
+        z-index: -1;
+    }
+    
+    .login-buttons-dropdown-align-right {
+        float: right;
+        font-size: 26px;
+    }
+    
+    .login-top-wrapper {
+        position: absolute;
+        display: inline-block;
+        top: 2px;
+        left: 10px;
+        font-size: 20px;
+    }
+}
+
+.personal-content-wrapper {
+    margin-top: 5%;
+}
+
+.welcome-wrapper {
+    width: 50%;
+    margin: 15% 0 0 25%;
+    position: relative;
+    
+    .welcome-content {
+        color: @text-color;
+        text-align:center;
+        z-index: 1;
+        letter-spacing: @letter-spacing-s;
+    }
+    
+    .welcome-content-title {
+        letter-spacing: @letter-spacing-l;
+    }
+    
+    .welcome-background {
+        position: absolute;
+        top: -2em;
+        z-index: -1;
+        width: 100%;
+        height: 200px;
+        background-color: @main-color;
+        .rotate(-5deg);
+    }
+
+}
+
+.login-wrapper {
+    display: inline-block;
+    border: 4px @text-color solid;
+    cursor: pointer;
+    letter-spacing: 10px;
+    font-size: 30px;
+    padding: 5px 15px;
+}
+
+#login-buttons a {
+    text-decoration: none;
+}
+
+.clearer {
+    clear: both;
+}

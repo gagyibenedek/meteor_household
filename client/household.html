@@ -1,0 +1,48 @@
+<head>
+  <title>household</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href="//fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  
+  <div class="title-wrapper">
+    <div class="title">
+      straighten out your
+      <span class="title-accent">HOUSEHOLD</span>
+    </div>
+    <div class="title-background"></div>
+    
+    {{#if currentUser}}
+      <div class="login-top-wrapper">
+        {{> loginButtons}}
+      </div>
+    {{/if}}
+  </div>
+  
+  
+  {{#if currentUser}}
+    {{> total}}
+
+    <div class="personal-content-wrapper">
+      <div class="form">
+        {{> form}}
+      </div>
+    
+      <div class="log">
+        {{> log}}
+      </div>
+    </div>  
+  {{else}}  
+    <div class="welcome-wrapper">
+      <div class="welcome-content">
+        <h1 class="welcome-content-title">Good to see you!</h1>
+        <div class="login-wrapper">
+          {{> loginButtons}}
+        </div>
+      </div>
+      <div class="welcome-background"></div>
+    </div>
+  {{/if}}
+  
+</body>
