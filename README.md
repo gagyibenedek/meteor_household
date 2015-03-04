@@ -1,7 +1,7 @@
 # meteor_household
 A simple app to keep track of your households spendings. Powered by Meteor.
 
-##Check out the live demo: household-gb.meteor.com
+Check out the live demo: household-gb.meteor.com
 
 Meteor packages used:
 
